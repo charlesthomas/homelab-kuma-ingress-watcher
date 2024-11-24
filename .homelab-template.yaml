@@ -1,0 +1,22 @@
+_commit: v1.12.1-9-g5863ce6
+_src_path: /Users/crthomas/code/charlesthomas/homelab-template
+additionalResources: ''
+backups: false
+helm: false
+homepageEnabled: false
+ingress: false
+labels: 'app: kuma-ingress-watcher'
+name: kuma-ingress-watcher
+namespace: kuma-ingress-watcher
+pvc: false
+reloader: true
+resources:
+- deployments.yaml
+- external-secrets.yaml
+- rbac.yaml
+- secrets.yaml
+- service-accounts.yaml
+service: false
+serviceAccount: false
+upstreamURL: https://github.com/SQuent/kuma-ingress-watcher
+url: https://github.com/charlesthomas/homelab-kuma-ingress-watcher
