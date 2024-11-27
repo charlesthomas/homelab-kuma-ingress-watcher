@@ -32,7 +32,7 @@ spec:
             - name: UPTIME_KUMA_URL
               value: "https://down.crt.house"
             - name: WATCH_INTERVAL
-              value: "10"
+              value: "60"
             - name: WATCH_INGRESSROUTES
               value: "false"
             - name: WATCH_INGRESS
