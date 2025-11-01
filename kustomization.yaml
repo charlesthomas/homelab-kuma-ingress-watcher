@@ -15,6 +15,12 @@ resources:
 - resources/rbac.yaml
 - resources/secrets.yaml
 - resources/service-accounts.yaml
+
+images:
+- name: kuma-ingress-watcher
+  newName: ghcr.io/squent/kuma-ingress-watcher
+  newTag: 1.7.1
+
 patches:
 - patch: |-
     apiVersion: apps/v1

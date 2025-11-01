@@ -24,7 +24,7 @@ spec:
           ports:
             - containerPort: 4025
               protocol: TCP
-          image: "ghcr.io/squent/kuma-ingress-watcher:1.5.0"
+          image: kuma-ingress-watcher
           stdin: true
           env:
             - name: LOG_LEVEL
