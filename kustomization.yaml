@@ -5,8 +5,10 @@ namespace: kuma-ingress-watcher
 
 commonAnnotations:
   repo: https://github.com/charlesthomas/homelab-kuma-ingress-watcher
-commonLabels:
-  app: kuma-ingress-watcher
+labels:
+- includeSelectors: true
+  pairs:
+    app: kuma-ingress-watcher
 
 resources:
 - resources/deployments.yaml
