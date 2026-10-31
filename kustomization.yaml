@@ -5,8 +5,10 @@ namespace: kuma-ingress-watcher
 
 commonAnnotations:
   repo: https://github.com/charlesthomas/homelab-kuma-ingress-watcher
-commonLabels:
-  app: kuma-ingress-watcher
+labels:
+- includeSelectors: true
+  pairs:
+    app: kuma-ingress-watcher
 
 resources:
 - resources/deployments.yaml
@@ -32,3 +34,11 @@ patches:
         reloader.stakater.com/auto: "true"
   target:
     kind: Deployment
+configMapGenerator:
+- name: grafana-dashboard-kuma-ingress-watcher
+  files:
+  - grafana/kuma-ingress-watcher.json
+  options:
+    disableNameSuffixHash: true
+    labels:
+      grafana_dashboard: "1"
